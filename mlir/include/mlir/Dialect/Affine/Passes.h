@@ -127,6 +127,9 @@ std::unique_ptr<Pass> createAffineExpandIndexOpsPass();
 /// operations.
 std::unique_ptr<Pass> createAffineExpandIndexOpsAsAffinePass();
 
+/// Creates a pass to perform loop interchange on hyper-rectangular loop nests.
+std::unique_ptr<OperationPass<func::FuncOp>> createAffineLoopInterchangePass();
+
 //===----------------------------------------------------------------------===//
 // Registration
 //===----------------------------------------------------------------------===//

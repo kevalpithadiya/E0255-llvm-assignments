@@ -99,6 +99,12 @@ bool AffineValueMap::isFunctionOf(unsigned idx, Value value) const {
   return expr.isFunctionOfDim(index);
 }
 
+bool AffineValueMap::isFunctionOf(unsigned startIdx, unsigned endIdx,
+                                  Value value) const {
+  return llvm::any_of(llvm::seq(startIdx, endIdx),
+                      [&](unsigned idx) { return isFunctionOf(idx, value); });
+}
+
 Value AffineValueMap::getOperand(unsigned i) const {
   return static_cast<Value>(operands[i]);
 }

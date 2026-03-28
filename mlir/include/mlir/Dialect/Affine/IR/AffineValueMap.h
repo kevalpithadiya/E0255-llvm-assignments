@@ -62,6 +62,10 @@ public:
   /// Return true if the idx^th result depends on 'value', false otherwise.
   bool isFunctionOf(unsigned idx, Value value) const;
 
+  /// Return true if any result in [startIdx, endIdx) depends on 'value',
+  /// false otherwise.
+  bool isFunctionOf(unsigned startIdx, unsigned endIdx, Value value) const;
+
   /// Return true if the result at 'idx' is a constant, false
   /// otherwise.
   bool isConstant(unsigned idx) const;

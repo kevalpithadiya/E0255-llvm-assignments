@@ -177,6 +177,12 @@ def AffineLoopFusion : Pass<"affine-loop-fusion"> {
   let dependentDialects = ["memref::MemRefDialect"];
 }
 
+def AffineLoopInterchange : Pass<"affine-loop-interchange", "func::FuncOp"> {
+  let summary =
+      "Interchange affine loops for better cache locality and parallelism";
+  let constructor = "mlir::affine::createAffineLoopInterchangePass()";
+}
+
 def AffineLoopInvariantCodeMotion
     : Pass<"affine-loop-invariant-code-motion", "func::FuncOp"> {
   let summary = "Hoist loop invariant instructions outside of affine loops";

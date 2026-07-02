@@ -1,3 +1,17 @@
+# LLVM & MLIR Optimization Passes
+This repository contains my implementations of two compiler optimization passes
+as part of the assignments for the [E0-255 Compiler Design](https://www.csa.iisc.ac.in/~udayb/e0255/)
+course by [Prof. Uday Reddy Bondhugula](https://www.csa.iisc.ac.in/~udayb/).
+These implementations are in their respective branches as listed below:
+1. `hoist-anticipated-expressions`
+2. `loop-interchange`
+
+More details on the individual passes are available in README file in their branches.
+
+---
+---
+---
+
 # The LLVM Compiler Infrastructure
 
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/llvm/llvm-project/badge)](https://securityscorecards.dev/viewer/?uri=github.com/llvm/llvm-project)
